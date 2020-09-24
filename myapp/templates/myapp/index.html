@@ -1,0 +1,359 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Marker - Portfolio Template</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="LitmusThemes">
+<!-- description -->
+<meta name="description" content="Marker - Creative Portfolio Template">
+<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,900" rel="stylesheet">
+<!-- Google Fonts -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+<!-- Font Awesome CSS -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/swiper.min.css' %}">
+<!-- slider CSS -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<!-- Style CSS -->
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+<!-- Responsive CSS -->
+<!-- colors CSS -->
+<link rel="stylesheet" href="{% static 'css/colors/primary.css' %}">
+</head>
+<body>
+<div id="wrapper"> 
+	<div class="preloader">
+    	<svg class="spinner" viewBox="0 0 50 50">
+		  <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+		</svg>
+    </div>
+	
+	<!--STYLE SWITCHER START-->
+	<div class="option-box">
+            <div class="color-option">
+                <h4>Colors :</h4>
+                <div class="list-unstyled">
+                    <ul class="colors">
+						<li data-value="css/colors/primary.css" id="color1"></li>
+						<li data-value="css/colors/blue.css" id="color2"></li>
+						<li data-value="css/colors/orange.css" id="color3"></li>
+						<li data-value="css/colors/light-green.css" id="color4"></li>
+						<li data-value="css/colors/yellow.css" id="color5"></li>
+						<li data-value="css/colors/green.css" id="color6"></li>
+						<li data-value="css/colors/red.css" id="color7"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="gear-check">
+                <i class="fa fa-cog fa-spin fa-fw"></i>
+            </div>
+        </div>
+	<!--STYLE SWITCHER END-->
+	
+	<!--HEADER START-->
+	<header id="header">
+		<div class="container-fluid">
+			<div class="navbar">
+				<a href="index.html#" id="logo" title="Marker">
+					<img src="{% static 'images/logo.png' %} " width="52" height="60" alt="Marker">
+				</a>
+				<div class="menu-trigger-btn d-flex align-items-center justify-content-end">
+					<button type="button" class="menu-trigger"><span></span></button>
+					<em>Explore</em>
+				</div><!--/.menu-trigger-btn-->
+			</div><!--/.navbar--> 
+		</div><!--/.container--> 
+	</header><!--/#header--> 
+	<!--HEADER END-->
+	
+	<div class="swiper-container portfolio-slider portfolio-container d-flex">
+		{% for p in portfolio %}
+        <div class="swiper-wrapper portfolio-wrapper">
+			<!---->
+            <a href="project-details.html" class="swiper-slide portfolio-slide">
+				<div class="portfolio-img" style="background-image:url({{ p.img.url }}); "></div>
+				<h3>{{ p.title }}</h3>
+				<h3> {{ p.description }}</h3>
+			</a>
+			<!---->
+		</div>
+		<!--/.swiper-wrapper-->
+		<div class="swiper-button swiper-button-prev"></div>
+		<div class="swiper-button swiper-button-next"></div>
+		{% endfor %}
+	</div>
+	<!--/.portfolio-container-->
+	
+	<!--CONTENT SECTION START-->
+	<div class="content-leftcol content-section">
+		<div class="nav-container d-flex align-items-center">
+			<nav id="main-nav" class="d-flex align-items-center">
+				<ul id="nav">
+					<li class="active"><a href="#home" data-rel="home">Home</a></li>
+					<li><a href="#about" data-rel="about">About</a></li>
+					<li><a href="#news" data-rel="news">News</a></li>
+					<li><a href="#contact" data-rel="contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div><!--/.nav-container-->
+		<div class="content-footer">
+			<div class="row align-items-center">
+				<div class="col-lg-8">
+					<div class="copyright">&copy; Copyrights 2019 Marker. All Rights Reserved</div>
+				</div>
+				<div class="col-lg-4">
+					<ul class="social d-flex justify-content-end">
+						<li><a href="index.html#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="index.html#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="index.html#" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="index.html#" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+					</ul>
+				</div>
+			</div><!--./row-->
+		</div><!--/.content-footer-->
+	</div>
+	<div class="content-rightcol content-section">
+		<div class="section-main section-dark">
+			<div class="section-scroll section-anim show section-dark" id="home">
+				<div class="main-img"></div>
+			</div><!--/.section-->
+			<div class="section-scroll section-anim section-dark" id="about">
+				<div class="content-col">
+				<div class="title-box">
+					<h1>We are Creative</h1>
+					<p>We Make beuatiful websites with our creative family</p>
+				</div><!--/.title-box-->
+				<p>Lights every signs from. Beginning whales bring. Good, make sea have also called also. Female. Together gathered replenish sixth, unto third god god creature likeness meat made.</p>
+				<div class="services-wrapper section-block">
+					<div class="row no-gutters">
+						<div class="col-xl-6">
+							<div class="service-box">
+								<figure class="service-icon"><img src="{% static 'images/web-design-icon.svg' %}" alt=""></figure>
+								<h4>Web Design</h4>
+								<p>To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words.</p>
+							</div><!--/.service-box-->
+						</div>
+						<div class="col-xl-6">
+							<div class="service-box">
+								<figure class="service-icon"><img src="{% static 'images/web-development-icon.svg' %}" alt=""></figure>
+								<h4>Web Development</h4>
+								<p>To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words.</p>
+							</div><!--/.service-box-->
+						</div>
+						<div class="col-xl-6">
+							<div class="service-box">
+								<figure class="service-icon"><img src="{% static 'images/marketing-icon.svg' %}" alt=""></figure>
+								<h4>Marketing</h4>
+								<p>To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words.</p>
+							</div><!--/.service-box-->
+						</div>
+						<div class="col-xl-6">
+							<div class="service-box">
+								<figure class="service-icon"><img src="{% static 'images/photography-icon.svg' %}" alt=""></figure>
+								<h4>Photography</h4>
+								<p>To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words.</p>
+							</div><!--/.service-box-->
+						</div>
+					</div><!--/.row-->
+				</div><!--/.section-block-->
+				<div class="team-wrapper section-block mb-0">
+					<h3 class="section-title">Meet our team members</h3>
+					<div class="team-row row justify-content-center justify-content-center">
+						<div class="col-lg-6 col-xl-4">
+							<div class="team-box">
+								<img src="{% static 'images/team-01.jpg' %}" alt="">
+								<h5>Mark Warne</h5>
+								<p>Creative head</p>
+							</div><!--/.team-box-->
+						</div>
+						<div class="col-lg-6 col-xl-4">
+							<div class="team-box">
+								<img src="{% static 'images/team-02.jpg' %}" alt="">
+								<h5>Maria Wilson</h5>
+								<p>Creative head</p>
+							</div><!--/.team-box-->
+						</div>
+						<div class="col-lg-6 col-xl-4">
+							<div class="team-box">
+								<img src="{% static 'images/team-03.jpg' %}" alt="">
+								<h5>John Doe</h5>
+								<p>Creative head</p>
+							</div><!--/.team-box-->
+						</div>
+						<div class="col-lg-6 col-xl-4">
+							<div class="team-box">
+								<img src="{% static 'images/team-04.jpg' %}" alt="">
+								<h5>Maria Wilson</h5>
+								<p>Creative head</p>
+							</div><!--/.team-box-->
+						</div>
+						<div class="col-lg-6 col-xl-4">
+							<div class="team-box">
+								<img src="{% static 'images/team-05.jpg' %}" alt="">
+								<h5>John Doe</h5>
+								<p>Creative head</p>
+							</div><!--/.team-box-->
+						</div>
+					</div><!--/.team-row-->
+				</div><!--/.section-block-->
+				<div class="section-block mb-0 pt-2">
+					<div class="swiper-container brand-logos">
+						<div class="swiper-wrapper brand-wrapper d-flex align-items-center">
+							<div class="swiper-slide">
+								<figure class="brand-logo"><img src="{% static 'images/partner-01.png' %}" alt=""></figure>
+							</div>
+							<div class="swiper-slide">
+								<figure class="brand-logo"><img src="{% static 'images/partner-02.png' %}" alt=""></figure>
+							</div>
+							<div class="swiper-slide">
+								<figure class="brand-logo"><img src="{% static 'images/partner-03.png' %}" alt=""></figure>
+							</div>
+							<div class="swiper-slide">
+								<figure class="brand-logo"><img src="{% static 'images/partner-04.png' %}" alt=""></figure>
+							</div>
+						</div>
+					</div>
+				</div><!--/.section-block-->
+			</div><!--/.content-col-->
+			</div><!--/.section-->
+			<div class="section-scroll section-anim section-dark" id="news">
+				<div class="content-col">
+				<div class="title-box">
+					<h2>Latest News</h2>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+				</div><!--/.title-box-->
+				<div class="news-wrapper">
+					<div class="row">
+						<div class="col-xl-6">
+							<div class="news-box">
+								<figure><a href="news-article.html"><img src="{% static 'images/news-img-01.jpg' %}" alt=""></a></figure>
+								<div class="news-toprow">
+									<a href="index.html#" class="news-category">Photography</a>
+									<em>20 November, 2018</em>
+								</div><!--/.news-toprow-->
+								<h4><a href="news-article.html">Photography event at street</a></h4>
+								<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+								<span class="posted-by">By <a href="index.html#">John Doe</a></span>
+							</div><!--/.news-box-->
+						</div>
+						<div class="col-xl-6">
+							<div class="news-box">
+								<figure><a href="news-article.html"><img src="{% static 'images/news-img-02.jpg' %}" alt=""></a></figure>
+								<div class="news-toprow">
+									<a href="index.html#" class="news-category">Photography</a>
+									<em>20 November, 2018</em>
+								</div><!--/.news-toprow-->
+								<h4><a href="news-article.html">I love simple beyond</a></h4>
+								<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+								<span class="posted-by">By <a href="index.html#">John Doe</a></span>
+							</div><!--/.news-box-->
+						</div>
+						<div class="col-xl-6">
+							<div class="news-box">
+								<figure><a href="news-article.html"><img src="{% static 'images/news-img-03.jpg' %}" alt=""></a></figure>
+								<div class="news-toprow">
+									<a href="index.html#" class="news-category">Photography</a>
+									<em>20 November, 2018</em>
+								</div><!--/.news-toprow-->
+								<h4><a href="news-article.html">Photography event at street</a></h4>
+								<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+								<span class="posted-by">By <a href="index.html#">John Doe</a></span>
+							</div><!--/.news-box-->
+						</div>
+						<div class="col-xl-6">
+							<div class="news-box">
+								<figure><a href="news-article.html"><img src="{% static 'images/news-img-04.jpg' %}" alt=""></a></figure>
+								<div class="news-toprow">
+									<a href="index.html#" class="news-category">Photography</a>
+									<em>20 November, 2018</em>
+								</div><!--/.news-toprow-->
+								<h4><a href="news-article.html">I love simple beyond</a></h4>
+								<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+								<span class="posted-by">By <a href="index.html#">John Doe</a></span>
+							</div><!--/.news-box-->
+						</div>
+					</div><!--/.row-->
+				</div><!--/.section-block-->
+			</div><!--/.content-col-->
+			</div><!--/.section-->
+			<div class="section-scroll section-anim section-dark" id="contact">
+				<div class="content-col">
+				<div class="title-box">
+					<h2>Get in Touch</h2>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+				</div><!--/.title-box-->
+				<div class="contact-cols mb-5">
+					<div class="row no-gutters">
+						<div class="col-xl-4">
+							<div class="contact-col">
+								<figure class="contact-icon"><img src="{% static 'images/location-icon.svg' %}" alt=""></figure>
+								<address>S-202, Lipsum street, California, USA</address>
+							</div>
+						</div>
+						<div class="col-xl-4">
+							<div class="contact-col">
+								<figure class="contact-icon"><img src="{% static 'images/phone-icon.svg' %}" alt=""></figure>
+								<a href="index.html#">+02 000 000 0202</a>
+							</div>
+						</div>
+						<div class="col-xl-4">
+							<div class="contact-col">
+								<figure class="contact-icon"><img src="{% static 'images/email-icon.svg' %}" alt=""></figure>
+								<a href="mailto:hello@company.com" class="email-link">hello@company.com</a>
+							</div>
+						</div>
+					</div><!--/.row-->
+				</div><!--/.contact-cols-->
+				<div class="contact-box">
+						<div id="form-messages" class="mb-4"></div>
+						<form id="ajax-contact" method="post" action="{% url 'applications' %}"> <!-- CONTACT FORM -->
+							<div class="row">
+								{% csrf_token %}
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control form-control-white" placeholder="Your Name" name="name" id="name" required type="name">
+									</div><!--/.form-group-->
+								</div><!--/.col-->
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control form-control-white" placeholder="Your Email" name="mail" id="email" required type="mail">
+									</div><!--/.form-group-->
+								</div><!--/.col-->
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control form-control-white" placeholder="Subject" name="subject" id="subject" required type="subject">
+									</div><!--/.form-group-->
+								</div><!--/.col-->
+								
+								<div class="col-md-12">
+									<div class="form-group">
+										<textarea id="message" class="form-control form-control-white" required placeholder="Write Your Message..." name="comment"></textarea>
+									</div><!--/.form-group-->
+								</div><!--/.col-->
+							</div><!--/.row-->
+							<div class="text-center mt-3 mt-md-4"><button type="submit" class="btn" id="btn-submit">Send message</button></div>
+						</form>
+					</div>
+			</div><!--/.content-col-->
+			</div><!--/.section-->
+		</div><!--/.section-main-->
+	</div>
+	<!--CONTENT SECTION END-->
+</div>
+<!--/#wrapper--> 
+<script src="{% static 'js/jquery.js' %}"></script> 
+<!-- Latest jQuery Library File --> 
+<script src="{% static 'js/bootstrap.min.js' %}"></script> 
+<!-- Latest Bootstrap --> 
+<script src="{% static 'js/swiper.min.js' %}"></script> 
+<!-- slider js -->
+<script src="{% static 'js/form.js' %}"></script> 
+<script src="{% static 'js/general-scripts.js' %}"></script> 
+<!-- Main Script --> 
+</body>
+</html>
